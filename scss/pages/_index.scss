@@ -179,6 +179,7 @@ $small-text : .875rem;
       cursor: pointer;
       border: none;
       margin-bottom: 1.5rem;
+      outline: 0;
       &:after {
         font-family: "Font Awesome 5 Free"; 
         content: "\f0d7";
