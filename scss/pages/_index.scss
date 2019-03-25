@@ -16,31 +16,11 @@ $small-text : .875rem;
 .overlay {
   display: none;
 }
-.sidebar-mobile {
+.content {
   display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  background-color: #343a40;
+}
+.d-mobile {
   display: none;
-  .logo--mobile {
-    margin: 0;
-    padding: .6rem 0;
-    padding-left: 1.5rem;
-  }
-  .sidebar__toggle-button {
-    border: 1px solid #fff;
-    background: transparent;
-    padding: 0.5rem;
-    margin: .5rem 0;
-    margin-right: 1.5rem;
-    i {
-      color: #fff;
-      font-size: 16px;
-    }
-  }
 }
 .sidebar {
   width: 265px;
@@ -57,7 +37,7 @@ $small-text : .875rem;
   white-space: nowrap;
   &::-webkit-scrollbar {
 		display: none;
-	}
+  }
 }
 .logo {
   margin-bottom: 3rem;
@@ -290,8 +270,8 @@ $small-text : .875rem;
     margin-left: .5rem; 
   }
   &__heading {
-    font-size: 3.5rem;
     font-weight: 500;
+    font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
   }
@@ -311,6 +291,7 @@ $small-text : .875rem;
       &__selection {
         color: #007bff;
         position: relative;
+        font-family: myFont;
         &:hover {
           color: #0056b3;
         }
@@ -336,9 +317,10 @@ $small-text : .875rem;
       &__link {
         display: block;
         padding: .15rem .5rem;
-        color: #007bff;
+        color: #2080e6;
         font-size: 85%;
         font-weight: 600;
+        font-family: myFont;
         &:hover {
           color: #006fe6;
           background-color: #EEF2F5;
@@ -358,7 +340,7 @@ $small-text : .875rem;
   padding: 4.5rem 0;
   .carousel {
     position: relative;
-    height: 29rem;
+    height: 27.5rem;
     margin-bottom: 4.5rem;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.07);
     &__img {
@@ -385,7 +367,7 @@ $small-text : .875rem;
     }
   &__heading {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     margin-bottom: 0;
   }
@@ -399,6 +381,7 @@ $small-text : .875rem;
   }
   &__link {
     color: #007bff;
+    font-family: myFont;
     &:first-child {
       margin-right: 1.5rem;
     }
@@ -416,11 +399,13 @@ $small-text : .875rem;
   }
   .carousel {
     position: relative;
-    height: 15.8rem;
+    height: 15rem;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.07);
     &__img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
+      padding: 0 14px;
+      box-sizing: border-box;
     }
     &__item {
       position: absolute;
@@ -439,7 +424,7 @@ $small-text : .875rem;
     }
   &__heading {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     margin-bottom: 0;
   }
@@ -453,6 +438,7 @@ $small-text : .875rem;
   }
   &__link {
     color: #007bff;
+    font-family: myFont;
     &:first-child {
       margin-right: 1.5rem;
     }
@@ -468,7 +454,7 @@ $small-text : .875rem;
   &__img {
     max-width: 100%;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.07);
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
   }
   &__icon {
     font-size: 2.25rem;
@@ -483,7 +469,7 @@ $small-text : .875rem;
   }
   &__heading {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     margin-bottom: 0;
   }
@@ -497,6 +483,7 @@ $small-text : .875rem;
   }
   &__link {
     color: #007bff;
+    font-family: myFont;
     &:first-child {
       margin-right: 1.5rem;
     }
@@ -512,7 +499,7 @@ $small-text : .875rem;
   &__img {
     max-width: 100%;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.07);
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
   }
   &__icon {
     font-size: 2.25rem;
@@ -527,7 +514,7 @@ $small-text : .875rem;
   }
   &__heading {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     margin-bottom: 0;
   }
@@ -540,6 +527,7 @@ $small-text : .875rem;
     display: flex;
   }
   &__link {
+    font-family: myFont;
     color: #007bff;
     &:first-child {
       margin-right: 1.5rem;

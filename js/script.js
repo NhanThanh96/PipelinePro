@@ -72,10 +72,13 @@ $(document).ready(function(){
   // resize event
   function resizeHandler() {
     var win = $(this); 
+    var sidebarCollapseWidth = "-285px";
       if (win.width() < 769) {
         $('.overlay').on('click', function(){        
-          $(".overlay").addClass("hide");
-          $(".sidebar").addClass("collapse");
+          $(".overlay").removeClass("hide");
+          $(".sidebar__collaspe").animate({
+            left : sidebarCollapseWidth
+          });
         });
       } else{
         $(window).unbind('scroll');
@@ -86,7 +89,18 @@ $(document).ready(function(){
   $(window).resize(resizeHandler);
 
   $(".js-sidebar__toggle-button").on("click", function(){
-    $(".sidebar").toggleClass("collapse");
+    var sidebarCollapse = $(".sidebar__collaspe");
+    var sidebarCollapseWidth = "-285px";
     $(".overlay").toggleClass("hide");
+    if(sidebarCollapse.css("left") == sidebarCollapseWidth) {
+      $(".sidebar__collaspe").animate({
+        left : 0
+      }, 350);
+    }
+    else {
+      $(".sidebar__collaspe").animate({
+        left : sidebarCollapseWidth
+      }, 350);
+    }
   });
 });

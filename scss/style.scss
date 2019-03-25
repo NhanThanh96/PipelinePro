@@ -5,10 +5,13 @@
   font-family: myFont;
   src: url("../fonts/Inter-UI-Regular.woff2");
 }
-
+@font-face {
+  font-family: myHeadingFont;
+  src: url("../fonts/Inter-UI-Medium.woff2");
+}
 body {
   margin: 0;
-  font-family: myFont;
+  font-family: myHeadingFont;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -16,7 +19,11 @@ body {
   text-align: left;
   background-color: #fff;
 }
-  
+
+p {
+  font-family: myFont;
+  font-weight: 400;
+}
 hr {
   box-sizing: content-box;
   height: 0;
@@ -121,7 +128,8 @@ a:hover {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
-  padding: 0 12px;
+  padding-right: 12px;
+  padding-left: 12px;
   box-sizing: border-box;
 }
 

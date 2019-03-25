@@ -1,9 +1,10 @@
-.d-flex.d-sm-block
-  .overlay
-  //- sidebar
+//- .d-flex.d-sm-block
+.overlay
+//- sidebar
+.content
   include ../components/_nav.pug
   //- main content
-  .main-content
+  section.main-content
     .container
       section.management-template
         .management-template__logo
@@ -62,44 +63,46 @@
           a.management-pages__link(href="#") Utility Pages
       section.modular-components
         .row.carousel-group
-          .carousel.modular-components__carousel.js-components__carousel--left.col-6
-            -
-              var modularComponentLeftCarousel = [
-                {
-                  img : "./images/activity.png",
-                },
-                {
-                  img : "./images/avatar-list.png",
-                },
-                {
-                  img : "./images/card-kanban.png",
-                },
-                {
-                  img : "./images/card-list.png",
-                },
-              ]
-            each item in modularComponentLeftCarousel
-              .carousel__item.js-components__carousel-item--left
-                img.carousel__img(src= item.img)
-          .carousel.modular-components__carousel.js-components__carousel--right.col-6
-            -
-              var modularComponentLeftCarousel = [
-                {
-                  img : "./images/avatar-list.png",
-                },
-                {
-                  img : "./images/activity.png",
-                },
-                {
-                  img : "./images/card-list.png",
-                },
-                {
-                  img : "./images/card-kanban.png",
-                },
-              ]
-            each item in modularComponentLeftCarousel
-              .carousel__item.js-components__carousel-item--right
-                img.carousel__img(src= item.img)
+          .col-6  
+            .carousel.modular-components__carousel.js-components__carousel--left
+              -
+                var modularComponentLeftCarousel = [
+                  {
+                    img : "./images/activity.png",
+                  },
+                  {
+                    img : "./images/avatar-list.png",
+                  },
+                  {
+                    img : "./images/card-kanban.png",
+                  },
+                  {
+                    img : "./images/card-list.png",
+                  },
+                ]
+              each item in modularComponentLeftCarousel
+                .carousel__item.js-components__carousel-item--left
+                  img.carousel__img(src= item.img)
+          .col-6  
+            .carousel.modular-components__carousel.js-components__carousel--right
+              -
+                var modularComponentLeftCarousel = [
+                  {
+                    img : "./images/avatar-list.png",
+                  },
+                  {
+                    img : "./images/activity.png",
+                  },
+                  {
+                    img : "./images/card-list.png",
+                  },
+                  {
+                    img : "./images/card-kanban.png",
+                  },
+                ]
+              each item in modularComponentLeftCarousel
+                .carousel__item.js-components__carousel-item--right
+                  img.carousel__img(src= item.img)
         .modular-components__title
           i.modular-components__icon.fas.fa-user-circle
           h3.modular-components__heading Modular Components
@@ -169,7 +172,7 @@
           p.famililar-tooling__paragraph Pipeline employs industry-standard development tools with an intuitive workflow designed to get you up and runnning faster.
           .famililar-tooling__bottom-link
             a.famililar-tooling__link(href="#") View Documentation
-    
+  
         
 
         
