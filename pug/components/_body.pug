@@ -1,0 +1,176 @@
+.d-flex.d-sm-block
+  .overlay
+  //- sidebar
+  include ../components/_nav.pug
+  //- main content
+  .main-content
+    .container
+      section.management-template
+        .management-template__logo
+          img.management-template__img(src="./images/logo-color.svg", alt="logo management template")
+          span.badge 1.0.1
+        h2.management-template__heading A project management template for Bootstrap 4
+        p.management-template__paragraph Pipeline is a collection of modular components and layouts for building project management and collaboration web apps.
+        .dropdown-group
+          .dropdown
+            a.dropdown__selection.js-dropdown__explore-page(href="#") Explore Pages
+            .dropdown__list.js-pages-list
+              a.dropdown__link App Pages
+              a.dropdown__link Utility Pages
+          .dropdown
+            a.dropdown__selection.js-dropdown__view-component(href="#") View Components
+            .dropdown__list.js-component-list
+              a.dropdown__link Bootstrap Components
+              a.dropdown__link Pipeline Components
+      section.management-pages
+        .carousel.js-management-page-carousel
+          -
+            var managementPagesCarousel = [
+              {
+                img : "./images/nav-side-chat.png",
+                url : "#"
+              },
+              {
+                img : "./images/nav-side-kanban-board.png",
+                url : "#"
+              },
+              {
+                img : "./images/nav-side-project.png",
+                url : "#"
+              },
+              {
+                img : "./images/nav-side-task.png",
+                url : "#"
+              },
+              {
+                img : "./images/nav-side-team.png",
+                url : "#"
+              }
+            ]
+          each item in managementPagesCarousel
+            .carousel__item.js-page-carousel-item
+              a.carousel__link(href= item.url)
+                img.carousel__img(
+                  src= item.img
+                  )
+        .management-pages__title
+          i.management-pages__icon.fas.fa-user-circle
+          h3.management-pages__heading Project Management Pages
+        p.management-pages__paragraph Pipeline makes building project management interfaces simple with pages for teams, projects, tasks, kanban boards and more.
+        .management-pages__link-group
+          a.management-pages__link(href="#") App Pages
+          a.management-pages__link(href="#") Utility Pages
+      section.modular-components
+        .row.carousel-group
+          .carousel.modular-components__carousel.js-components__carousel--left.col-6
+            -
+              var modularComponentLeftCarousel = [
+                {
+                  img : "./images/activity.png",
+                },
+                {
+                  img : "./images/avatar-list.png",
+                },
+                {
+                  img : "./images/card-kanban.png",
+                },
+                {
+                  img : "./images/card-list.png",
+                },
+              ]
+            each item in modularComponentLeftCarousel
+              .carousel__item.js-components__carousel-item--left
+                img.carousel__img(src= item.img)
+          .carousel.modular-components__carousel.js-components__carousel--right.col-6
+            -
+              var modularComponentLeftCarousel = [
+                {
+                  img : "./images/avatar-list.png",
+                },
+                {
+                  img : "./images/activity.png",
+                },
+                {
+                  img : "./images/card-list.png",
+                },
+                {
+                  img : "./images/card-kanban.png",
+                },
+              ]
+            each item in modularComponentLeftCarousel
+              .carousel__item.js-components__carousel-item--right
+                img.carousel__img(src= item.img)
+        .modular-components__title
+          i.modular-components__icon.fas.fa-user-circle
+          h3.modular-components__heading Modular Components
+        p.modular-components__paragraph Build feature-rich pages with everything Bootstrap 4.1.3 has to offer and extend functionality with Pipeline's suite of stylish custom components.
+        .modular-components__link-group
+          a.modular-components__link(href="#") Pipeline Components
+          a.modular-components__link(href="#") Bootstrap Components
+      section.flexible-layouts
+        .row
+          -
+            var flexibleLayoutImgList = [
+              {
+                img : "./images/layout-nav-side.svg",
+                alt : "layout-nav-side"
+              },
+              {
+                img : "./images/layout-nav-top.svg",
+                alt : "layout-nav-top"
+              },
+              {
+                img : "./images/layout-nav-top-sidebar.svg",
+                alt : "layout-nav-top-sidebar"
+              }
+            ]
+          each item in flexibleLayoutImgList
+            .col-4
+              img.flexible-layouts__img(
+                src= item.img,
+                alt= item.alt
+                )
+        .flexible-layouts__title
+          i.flexible-layouts__icon.fas.fa-user-circle
+          h3.flexible-layouts__heading Flexible Layouts
+        p.flexible-layouts__paragraph Pipeline offers three distinct layouts to suit a variety of content types. Layouts are fully responsive and scale elegantally for different devices and screen sizes.
+        .flexible-layouts__bottom-link
+          a.flexible-layouts__link(href="#") Explore Layouts
+      section.famililar-tooling
+          .row
+            -
+              var famililarToolingImgList = [
+                {
+                  img : "./images/logo-bootstrap.svg",
+                  alt : "logo-color.svg"
+                },
+                {
+                  img : "./images/logo-sass.svg",
+                  alt : "logo-color"
+                },
+                {
+                  img : "./images/logo-gulp.svg",
+                  alt : "logo-gulp"
+                },
+                {
+                  img : "./images/logo-npm.svg",
+                  alt : "logo-npm"
+                }
+              ]
+            each item in famililarToolingImgList
+              .col-3
+                img.famililar-tooling__img(
+                  src= item.img,
+                  alt= item.alt
+                  )
+          .famililar-tooling__title
+            i.famililar-tooling__icon.fas.fa-user-circle
+            h3.famililar-tooling__heading Familiar Tooling
+          p.famililar-tooling__paragraph Pipeline employs industry-standard development tools with an intuitive workflow designed to get you up and runnning faster.
+          .famililar-tooling__bottom-link
+            a.famililar-tooling__link(href="#") View Documentation
+    
+        
+
+        
+          

@@ -1,0 +1,87 @@
+.sidebar-mobile
+  .logo.logo--mobile
+    a.logo__link
+      img.logo__img(src="./images/logo.svg", alt="Pipeline")
+  .sidebar-collapse
+    button.sidebar__toggle-button.js-sidebar__toggle-button
+      span
+        i.fas.fa-bars
+    +profile()
+.sidebar
+  .logo
+    a.logo__link
+      img.logo__img(src="./images/logo.svg", alt="Pipeline")
+  nav.navbar
+    -
+      var navList = [
+        {
+          name  : "Overview",
+          url : "#",
+        },
+        {
+          name  : "Pages",
+          url : "#",
+          submenu : [
+            {
+              name  : "App Pages",
+              url : "#"
+            },
+            {
+              name  : "Utility Pages",
+              url : "#"
+            },
+            {
+              name  : "Layouts",
+              url : "#"
+            }
+          ]
+        },
+        {
+          name  : "Components",
+          url : "#",
+          submenu : [
+            {
+              name  : "Bootstrap",
+              url : "#",
+            },
+            {
+              name  : "Pipeline",
+              url : "#"
+            }
+          ]
+        },
+        {
+          name  : "Documentation",
+          url : "#"
+        },
+        {
+          name  : "Changelog",
+          url : "#"
+        }
+      ]
+    +navlist()
+  .quick-links
+    h3.quick-links__title Quick Links
+    -
+      var quickLinkList = ["Team Overview", "Project", "Single Task", "Kanban Board"]
+    ul.quick-links__list
+      each val, index in quickLinkList
+        li.quick-links__item
+          a.quick-links__link= val
+  .sidebar__action
+    .search
+      form.search__form(action="#")
+        button.search__button
+          i.search__icon.fas.fa-search
+        input.search__input(type="text" placeholder="Search")
+    .add-new
+      button.add-new__btn.js-add-new__btn Add new
+      -
+        var addNewList = ["Team", "Project", "Task"]
+      ul.dropdown.js-add-new__dropdown
+        each val, index in addNewList
+          li.dropdown__item
+            a.dropdown__link(href="#")= val
+    +profile()
+
+      

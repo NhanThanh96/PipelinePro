@@ -1,0 +1,26 @@
+mixin profile()
+  .profile  
+    a.profile__link.js-profile__link(href="#")
+      img.profile__img(src="./images/avatar-male-4.jpg", alt="avatar")
+    -
+      var profileList = ["Profile", "Account Settings", "Log Out"]
+    ul.profile__list.js-profile__list
+      each val, index in profileList
+        li.profile__item
+          a.profile__link(href="#")= val
+mixin navlist()
+  ul.navbar__list
+    each item in navList
+      li.navbar__item
+        a.navbar__link(
+          class= item.submenu ? "navbar__dropdown js-navbar__dropdown" : ""
+          href= item.url
+        )= item.name
+        if item.submenu
+          ul.navbar__list.navbar__submenu
+            each sub in item.submenu
+              li.navbar__item
+                a.navbar__link(href= sub.url)= sub.name
+
+      
+    
