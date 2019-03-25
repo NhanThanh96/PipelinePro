@@ -40,63 +40,53 @@ $(document).ready(function(){
   $(".js-page-carousel-item:gt(0)").hide();
   $(".js-components__carousel-item--left:gt(0)").hide();
   $(".js-components__carousel-item--right:gt(0)").hide();
-  // var carousel = (item, container) => {
-  //   $(item)
-  //   .fadeOut(1000)
-  //   .next()
-  //   .fadeIn(1000)
-  //   .end()
-  //   .appendTo(container);
-  // }
-
-  // setInterval(carousel(".js-page-carousel-item:first", ".js-management-page-carousel"), 2000);
   
   setInterval(function() {
     $('.js-page-carousel-item:first')
-        .fadeOut(1000)
-        .next()
-        .fadeIn(1000)
-        .end()
-        .appendTo('.js-management-page-carousel');
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('.js-management-page-carousel');
     }, 3000);
-  
-    setInterval(function() {
-      $('.js-components__carousel-item--left:first')
-          .fadeOut(1000)
-          .next()
-          .fadeIn(1000)
-          .end()
-          .appendTo('.js-components__carousel--left');
-      }, 3000);
 
-    setInterval(function() {
-      $('.js-components__carousel-item--right:first')
-          .fadeOut(1000)
-          .next()
-          .fadeIn(1000)
-          .end()
-          .appendTo('.js-components__carousel--right');
-      }, 4000);
+  setInterval(function() {
+    $('.js-components__carousel-item--left:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('.js-components__carousel--left');
+    }, 3000);
 
-    // button toggle
-    // resize event
-    function resizeHandler() {
-      var win = $(this); 
-          if (win.width() < 769) {
-              $('.overlay').on('click', function(){        
-                  $(".overlay").addClass("hide");
-                  $(".sidebar").addClass("collapse");
-              });
-          } else{
-              $(window).unbind('scroll');
-          }
+  setInterval(function() {
+    $('.js-components__carousel-item--right:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('.js-components__carousel--right');
+    }, 4000);
+
+  // button toggle
+  // resize event
+  function resizeHandler() {
+    var win = $(this); 
+      if (win.width() < 769) {
+        $('.overlay').on('click', function(){        
+          $(".overlay").addClass("hide");
+          $(".sidebar").addClass("collapse");
+        });
+      } else{
+        $(window).unbind('scroll');
       }
-    resizeHandler();
+    }
+  resizeHandler();
 
-    $(window).resize(resizeHandler);
+  $(window).resize(resizeHandler);
 
-    $(".js-sidebar__toggle-button").on("click", function(){
-      $(".sidebar").toggleClass("collapse");
-      $(".overlay").toggleClass("hide");
-    });
+  $(".js-sidebar__toggle-button").on("click", function(){
+    $(".sidebar").toggleClass("collapse");
+    $(".overlay").toggleClass("hide");
+  });
 });
